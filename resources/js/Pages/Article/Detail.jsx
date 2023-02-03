@@ -9,7 +9,9 @@ export default function Detail({ auth, errors, article }) {
             article={article}
             header={
                 <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-                    My Article
+                    {article.user.name == auth.user.name
+                        ? "My Article"
+                        : "Article"}
                 </h2>
             }>
             <Head title="Article" />

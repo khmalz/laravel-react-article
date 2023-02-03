@@ -50,7 +50,8 @@ export default function Authenticated({
                                             ? article.user.name ==
                                               auth.user.name
                                             : null) ||
-                                        route().current("article*")
+                                        route().current("article.index") ||
+                                        route().current("article.edit")
                                     }>
                                     My Article
                                 </NavLink>
